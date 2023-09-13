@@ -1,87 +1,97 @@
-export default function Example() {
+import { NavLink } from "react-router-dom";
+import Picture from "../../public/images/signinPic.jpg";
+import Logo from "../../public/logo/logo.svg";
+import Button from "../component/buttons/Btn";
+const label = [
+  { name: "email", placeholder: "email@example.com" },
+  { name: "password", placeholder: "password" },
+];
+
+function Signin() {
   return (
     <>
-      {/*
-          This example requires updating your template:
-  
-          ```
-          <html class="h-full bg-white">
-          <body class="h-full">
-          ```
-        */}
-      <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="w-auto h-10 mx-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
-          <h2 className="mt-10 text-2xl font-bold leading-9 tracking-tight text-center text-gray-900">
-            Sign in to your account
-          </h2>
-        </div>
+      <div className="w-full h-screen align-middle ">
+        <div className="flex items-center w-full h-full">
+          <div className="relative hidden w-4/5 h-full overflow-hidden bg-pink-400 lg:block">
+            <span className="absolute text-3xl font-extrabold text-white top-5 left-5 ">
+              Sebatek
+            </span>
 
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium leading-6 text-gray-900"
-              >
-                Email address
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+            <img
+              src={Picture}
+              className="object-cover object-center w-full h-full "
+              alt=""
+            />
+          </div>
+          <div className="w-full h-full mx-5 lg:w-2/4 ">
+            <div className="flex flex-col justify-center flex-1 min-h-full lg:px-8">
+              <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+                <NavLink to={"/"}>
+                  <img
+                    className="w-auto h-10 "
+                    src={Logo}
+                    alt="Sebatek Cherya-dz"
+                  />
+                </NavLink>
+
+                <p className="mt-6 mb-3 text-2xl font-bold leading-9 tracking-tight text-gray-900">
+                  Sign in to{" "}
+                  <span className="text-2xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-sky-600">
+                    Sebatek
+                  </span>
+                </p>
+                <p className="text-sm text-neutral-500">
+                  New user?{" "}
+                  <NavLink className={"text-green-400"}>
+                    Create an account
+                  </NavLink>
+                </p>
               </div>
-            </div>
 
-            <div>
-              <div className="flex items-center justify-between">
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Password
-                </label>
-                <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
-                  >
-                    Forgot password?
-                  </a>
+              <div className="mt-6 sm:mx-auto sm:w-full sm:max-w-sm">
+                {label.map((labels) => (
+                  <form key={labels.name} action="#" method="POST">
+                    <div>
+                      <label
+                        htmlFor={labels.name}
+                        className="block text-sm font-medium leading-6 text-gray-900"
+                      ></label>
+                      <div className="mt-2">
+                        <input
+                          id={labels.name}
+                          name={labels.name}
+                          type={labels.name}
+                          autoComplete={labels.name}
+                          placeholder={labels.placeholder}
+                          required
+                          className="block w-full p-3 text-gray-900 border-0 rounded-md shadow-sm mt-7 focus:outline focus:outline-4 focus:outline-offset-0 focus:outline-sky-500/10 focus:border-blue-500 ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
+                        />
+                      </div>
+                    </div>
+                  </form>
+                ))}
+                <div className="mt-2">
+                  <div className="text-right">
+                    <NavLink
+                      to={""}
+                      href="#"
+                      className="text-sm underline text-sky-500 hover:text-sky-400"
+                    >
+                      Forgot password?
+                    </NavLink>
+                  </div>
+                  <Button
+                    title={"Signin"}
+                    className={"bg-sky-500 hover:bg-sky-400 text-white w-full "}
+                  />
                 </div>
               </div>
-              <div className="mt-2">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
             </div>
-
-            <div>
-              <button
-                type="submit"
-                className="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Sign in
-              </button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </>
   );
 }
+
+export default Signin;

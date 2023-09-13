@@ -31,7 +31,7 @@ function InfoSection() {
       {info.map((content) => (
         <div
           key={content.id}
-          className="max-w-2xl px-4 py-8 mx-auto borde sm:px-6 sm:py-16 lg:max-w-7xl lg:px-20"
+          className="max-w-2xl px-4 py-20 mx-auto borde sm:px-6 sm:py-28 lg:max-w-7xl lg:px-20"
         >
           <div
             className={`md:flex before:absolute before:w-[200px] before:h-[200px] before:-z-10 before:rounded-full before:blur-3xl before:bg-gradient-to-r before:from-cyan-500 ${content.backgroundBefore} md:space-x-7 ${content.direction} `}

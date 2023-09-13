@@ -9,10 +9,10 @@ export default function CategoryCard() {
         <div className="max-w-2xl py-16 mx-auto sm:py-24 lg:max-w-none lg:py-32">
           <h3 className="text-3xl font-extrabold md:text-5xl">CATEGORIE</h3>
           <div
-            className={`mt-6 space-y-4 lg:grid lg:grid-cols-2 lg:gap-3 lg:space-y-0`}
+            className={`mt-6 space-y-4 lg:grid lg:grid-cols-4 lg:gap-3 lg:space-y-0`}
           >
             {callouts.map((callout) => (
-              <div key={callout.name}>
+              <div key={callout.name} className={callout.width}>
                 <NavLink to={callouts.href}>
                   <div className={`relative group`}>
                     <div
@@ -21,10 +21,10 @@ export default function CategoryCard() {
                       <img
                         src={callout.imageSrc}
                         alt={callout.imageAlt}
-                        className="object-cover object-center w-full h-full transition-all duration-700 ease-in-out group-hover:scale-125"
+                        className="object-cover object-center w-full h-full transition-all duration-700 ease-in-out before:z-10 before:absolute before:h-full before:bg-gradient-to-t before:mix-blend-multiply-overlay before:from-neutral-950/90 before:to-neutral-900/30 group-hover:scale-125"
                       />
                     </div>
-                    <h3 className="absolute group-hover:block hidden w-full text-center text-5xl font-extrabold text-white top-[50%] -translate-y-[50%]">
+                    <h3 className="absolute w-full text-center text-5xl font-extrabold text-white top-[50%] -translate-y-[50%]">
                       {callout.name}
                     </h3>
                   </div>

@@ -99,6 +99,7 @@ export const callouts = [
   {
     name: "Men Sports",
     border: "rounded-lg",
+    width: "col-span-3",
     borderColor: "border-sky-500",
     imageSrc:
       "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80",
@@ -123,7 +124,7 @@ export const callouts = [
   },
   {
     name: "Women Classic",
-    width: "grid-cols-2",
+    width: "col-span-3",
     imageSrc:
       "https://images.unsplash.com/photo-1457647239067-15a2a76c724e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
     imageAlt: "Shoes for women type Classic.",
