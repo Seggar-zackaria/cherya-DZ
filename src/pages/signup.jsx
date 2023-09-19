@@ -3,11 +3,15 @@ import Picture from "../../public/images/signinPic.jpg";
 import Logo from "../../public/logo/logo.svg";
 import Button from "../component/buttons/Btn";
 const label = [
+  { name: "name", placeholder: "name", wdith: "w-2/5" },
+  { name: "familly name", placeholder: "familly name", wdith: "w-2/5" },
+  { name: "addresse", placeholder: "addresse" },
+  { name: "addresse", placeholder: "phone number" },
   { name: "email", placeholder: "email@example.com" },
   { name: "password", placeholder: "password" },
 ];
 
-function Signin() {
+function Signup() {
   return (
     <>
       <div className="w-full h-screen align-middle ">
@@ -41,9 +45,9 @@ function Signin() {
                   </span>
                 </p>
                 <p className="text-sm text-neutral-500">
-                  New user?{" "}
-                  <NavLink to="/signup" className={"text-green-400"}>
-                    Create an account
+                  Already a user?{" "}
+                  <NavLink to="/signin" className={"text-green-400"}>
+                    Signin
                   </NavLink>
                 </p>
               </div>
@@ -64,24 +68,16 @@ function Signin() {
                           autoComplete={labels.name}
                           placeholder={labels.placeholder}
                           required
-                          className="block w-full p-3 text-gray-900 border-0 rounded-md shadow-sm mt-7 focus:outline focus:outline-4 focus:outline-offset-0 focus:outline-sky-500/10 focus:border-blue-500 ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
+                          className={`flex ${labels.wdith} p-3 w-full text-gray-900 border-0 rounded-md shadow-sm mt-7 focus:outline focus:outline-4 focus:outline-offset-0 focus:outline-sky-500/10 focus:border-blue-500 ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6`}
                         />
                       </div>
                     </div>
                   </form>
                 ))}
                 <div className="mt-2">
-                  <div className="text-right">
-                    <NavLink
-                      to={""}
-                      href="#"
-                      className="text-sm underline text-sky-500 hover:text-sky-400"
-                    >
-                      Forgot password?
-                    </NavLink>
-                  </div>
+                  <div className="text-right"></div>
                   <Button
-                    title={"Signin"}
+                    title={"Signup"}
                     className={"bg-sky-500 hover:bg-sky-400 text-white w-full "}
                   />
                 </div>
@@ -94,4 +90,4 @@ function Signin() {
   );
 }
 
-export default Signin;
+export default Signup;

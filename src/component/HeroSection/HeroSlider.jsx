@@ -27,7 +27,7 @@ export default function Carousel() {
                     className="object-cover object-center w-full h-full"
                   />
                 </div>
-                <div className="absolute w-full z-20 pl-16 text-start text-white top-1/2 md:top3/4 -translate-y-[50%]">
+                <div className="absolute w-full z-20 pl-8 lg:pl-16 text-start text-white top-1/2 md:top3/4 -translate-y-[50%]">
                   <div className="px-2 py-1 mb-2 text-[10px] md:text-[12px] font-bold rounded-md md:rounded-lg bg-fuchsia-800  w-fit">
                     {shoe.badge}
                   </div>
@@ -37,7 +37,10 @@ export default function Carousel() {
                   <p className="w-full mt-5 text-sm lowercase text-neutral-300 lg:w-3/5">
                     {shoe.description}
                   </p>
-                  <Button title="Buy Shoe" className />
+                  <Button
+                    title="Buy Shoe"
+                    className="text-black bg-slate-100"
+                  />
                 </div>
               </div>
             </div>
