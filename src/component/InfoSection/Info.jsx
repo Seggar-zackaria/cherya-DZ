@@ -31,19 +31,23 @@ function InfoSection() {
       {info.map((content) => (
         <div
           key={content.id}
-          className="max-w-2xl px-4 py-20 mx-auto borde sm:px-6 sm:py-28 lg:max-w-7xl lg:px-20"
+          className='max-w-2xl px-4 py-20 mx-auto borde sm:px-6 sm:py-28 lg:max-w-7xl lg:px-20'
         >
           <div
-            className={`md:flex before:absolute before:w-[200px] before:h-[200px] before:-z-10 before:rounded-full before:blur-3xl before:bg-gradient-to-r before:from-cyan-500 ${content.backgroundBefore} md:space-x-7 ${content.direction} `}
+            className={`md:flex ${content.backgroundBefore} md:space-x-7 ${content.direction} `}
           >
-            <div className={``}>
-              <content.icon className={`mx-auto w-52 h-52 ${content.color} `} />
+            <div
+              className={`relative before:absolute before:w-full before:h-full before:rounded-full before:blur-3xl before:bg-gradient-to-r before:from-cyan-500 ${content.backgroundBefore} `}
+            >
+              <content.icon
+                className={` text-start lg:w-64 lg:h-64 h-52 w-52 ${content.color} `}
+              />
             </div>
             <div>
               <div className={`mb-5 text-5xl ${content.color} font-extrabold`}>
                 {content.Title}
               </div>
-              <div className="text-gray-500">{content.content}</div>
+              <div className='text-gray-500 lg:w-4/5'>{content.content}</div>
             </div>
           </div>
         </div>
