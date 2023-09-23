@@ -8,9 +8,11 @@ import {
 import Logo from "../../../public/logo/logoRaw.svg";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className='px-6 py-3 mx-auto max-w-7xl lg:px-8'>
-      <div className='justify-between max-w-2xl py-16 lg:flex sm:py-24 lg:max-w-none'>
+      <div className='justify-between max-w-2xl pt-16 lg:flex sm:pt-24 lg:max-w-none'>
         <div className='lg:w-2/5'>
           <h3 className='mb-3 text-3xl font-extrabold'>SEBATEK</h3>
           <p>
@@ -29,7 +31,7 @@ function Footer() {
             />
           </div>
         </div>
-        <div className='mt-5 space-y-6 lg:w-2/4 lg:space-y-0 md:justify-between md:flex'>
+        <div className='mt-5 mb-3 space-y-6 lg:w-2/4 lg:space-y-0 md:justify-between md:items-center md:flex'>
           <div>
             <p className='mb-3 font-extrabold'>Contact</p>
             <ul>
@@ -79,6 +81,9 @@ function Footer() {
           <div>
             <img src={Logo} alt='cheryadz boutique' title='cheryadz boutique' />
           </div>
+        </div>
+        <div className='pt-3 text-sm text-center border-t border-neutral-400/30 text-neutral-500'>
+          All rights deservered by Cherya-DZ &copy; {currentYear}
         </div>
       </div>
     </footer>
