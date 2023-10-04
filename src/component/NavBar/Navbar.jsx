@@ -95,24 +95,24 @@ export default function NavBar() {
           <div className="flow-root mt-6">
             <div className="-my-6">
               <div className="py-6 space-y-2">
-                <a
-                  href="#"
+                <NavLink
+                  to="/"
                   className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to={`/category`}
                   className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                 >
                   Men
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to={`/category`}
                   className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 text-gray-900 rounded-lg hover:bg-gray-50"
                 >
                   Women
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

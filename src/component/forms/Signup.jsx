@@ -1,8 +1,6 @@
 import { useFormik, Field, ErrorMessage } from "formik";
 import { useSchema } from "../../utils/schema";
 
-// RPF66-BNPPG-TY2X2-W4JFF-K4R7F
-
 const onSubmit = async (values, actions) => {
   await new Promise((resolve) => setTimeout(resolve, 1000));
   actions.resetForm();
@@ -32,12 +30,12 @@ const FormSignUp = () => {
   console.log(errors);
   return (
     <div>
-      <form action='' autoComplete='off' method='post'>
-        <label htmlFor='email'>email</label>
+      <form action="" autoComplete="off" method="post">
+        <label htmlFor="email">email</label>
         <input
-          type='email'
+          type="email"
           value={values.email}
-          placeholder='email'
+          placeholder="email"
           onChange={handleChange}
           onBlur={handleBlur}
           className={`${
@@ -46,10 +44,10 @@ const FormSignUp = () => {
               : ""
           } block w-full p-3 text-gray-900 border-0 rounded-md shadow-sm mt-7 focus:outline focus:outline-4 focus:outline-offset-0 focus:outline-sky-500/10 focus:border-blue-500 ring-1 ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6
         `}
-          id='email'
+          id="email"
         />
         {errors.email && touched.email && (
-          <p className='text-red-600'>{errors.email}</p>
+          <p className="text-red-600">{errors.email}</p>
         )}
       </form>
     </div>

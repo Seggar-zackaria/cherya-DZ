@@ -11,45 +11,45 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className='px-6 py-3 mx-auto max-w-7xl lg:px-8'>
-      <div className='justify-between max-w-2xl pt-16 lg:flex sm:pt-24 lg:max-w-none'>
-        <div className='lg:w-2/5'>
-          <h3 className='mb-3 text-3xl font-extrabold'>SEBATEK</h3>
+    <footer className="px-6 py-3 mx-auto max-w-7xl lg:px-8">
+      <div className="justify-between max-w-2xl pt-16 lg:flex sm:pt-24 lg:max-w-none">
+        <div className="lg:w-2/5">
+          <h3 className="mb-3 text-3xl font-extrabold">SEBATEK</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industrys standard dummy text
             ever since{" "}
           </p>
-          <div className='flex'>
+          <div className="flex">
             <TbBrandFacebook
-              className='text-3xl text-blue-600'
-              title='Facebook'
+              className="text-3xl text-blue-600"
+              title="Facebook"
             />
             <TbBrandInstagram
-              className='text-3xl text-pink-500'
-              title='Instagram'
+              className="text-3xl text-pink-500"
+              title="Instagram"
             />
           </div>
         </div>
-        <div className='mt-5 mb-3 space-y-6 lg:w-2/4 lg:space-y-0 md:justify-between md:items-center md:flex'>
+        <div className="mt-5 mb-3 space-y-6 lg:w-2/4 lg:space-y-0 md:justify-between md:items-center md:flex">
           <div>
-            <p className='mb-3 font-extrabold'>Contact</p>
+            <p className="mb-3 font-extrabold">Contact</p>
             <ul>
               <li>
                 <a
-                  className='flex items-center gap-1 transition-all w-fit hover:border-b hover:border-black hover:delay-150 '
-                  href='tel:0561022630'
+                  className="flex items-center gap-1 transition-all w-fit hover:border-b hover:border-black hover:delay-150 "
+                  href="tel:0561022630"
                 >
                   <i>
-                    <TbPhone className='w-5 h-5' />
+                    <TbPhone className="w-5 h-5" />
                   </i>
                   0561022630
                 </a>
               </li>
               <li>
                 <a
-                  className='flex items-center gap-1 transition-all w-fit hover:border-b hover:border-black hover:delay-150 '
-                  href='mailto:zakari0002@gmail.com'
+                  className="flex items-center gap-1 transition-all w-fit hover:border-b hover:border-black hover:delay-150 "
+                  href="mailto:zakari0002@gmail.com"
                 >
                   <i>
                     <TbMail />
@@ -59,9 +59,9 @@ function Footer() {
               </li>
               <li>
                 <a
-                  className='flex items-center gap-1 transition-all w-fit hover:border-b hover:border-black hover:delay-150 '
-                  href=''
-                  target='_blank'
+                  className="flex items-center gap-1 transition-all w-fit hover:border-b hover:border-black hover:delay-150 "
+                  href=""
+                  target="_blank"
                 >
                   <TbLocation />
                   Bachjarah, Bourouba
@@ -70,7 +70,7 @@ function Footer() {
             </ul>
           </div>
           <div>
-            <p className='mb-3 font-extrabold'>Products</p>
+            <p className="mb-3 font-extrabold">Products</p>
             <ul>
               <li>Classic </li>
               <li>Sport</li>
@@ -79,12 +79,12 @@ function Footer() {
           </div>
 
           <div>
-            <img src={Logo} alt='cheryadz boutique' title='cheryadz boutique' />
+            <img src={Logo} alt="cheryadz boutique" title="cheryadz boutique" />
           </div>
         </div>
-        <div className='pt-3 text-sm text-center border-t border-neutral-400/30 text-neutral-500'>
-          All rights deservered by Cherya-DZ &copy; {currentYear}
-        </div>
+      </div>
+      <div className="pt-3 mt-4 text-sm text-center border-t border-neutral-900/30 text-neutral-500">
+        All rights reserved by Cherya-DZ &copy; {currentYear}
       </div>
     </footer>
   );
