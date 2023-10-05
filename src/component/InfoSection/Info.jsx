@@ -36,7 +36,9 @@ function InfoSection() {
               <content.icon className={`w-44 h-44 text-white `} />
             </div>
             <div className="p-8 mx-5 border border-gray-300 sm:mt-6 md:mt-0 rounded-3xl">
-              <div className={`mb-5 text-4xl ${content.color} font-extrabold`}>
+              <div
+                className={`mb-5 text-2xl md:text-4xl ${content.color} font-extrabold`}
+              >
                 {content.Title}
               </div>
               <div className="text-gray-500 ">{content.content}</div>
